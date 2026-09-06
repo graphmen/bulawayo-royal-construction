@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <style>
+    .brand-title {
+      font-family: 'Cinzel', 'Montserrat', 'Trajan Pro', 'Georgia', serif;
+      font-weight: 800;
+      fill: #162866;
+      letter-spacing: 7px;
+    }
+    .brand-sub {
+      font-family: 'Cinzel', 'Montserrat', 'Trajan Pro', 'Georgia', serif;
+      font-weight: 700;
+      fill: #162866;
+      letter-spacing: 5.5px;
+    }
+    .brand-tagline {
+      font-family: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', sans-serif;
+      font-style: italic;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #475569;
+      letter-spacing: 1.2px;
+    }
+    .crane-fill { fill: #C8972E; }
+    .navy-fill { fill: #162866; }
+  </style>
+
+  <!-- Corner Geometric Brand Accent -->
+  <polygon points="455,500 500,425 500,500" fill="#162866" />
+  <polygon points="480,500 500,465 500,500" fill="#C8972E" />
+
+  <!-- Main Wordmark Header -->
+  <g transform="translate(45, 65)">
+    <text x="0" y="32" class="brand-title" font-size="33">BULAWAYO</text>
+    <text x="0" y="78" class="brand-title" font-size="33">ROYAL</text>
+    <text x="0" y="124" class="brand-sub" font-size="30">CONSTRUCTION</text>
+  </g>
+
+  <!-- Top Architectural Dividing Rule -->
+  <line x1="45" y1="212" x2="455" y2="212" stroke="#162866" stroke-width="4" stroke-linecap="round" />
+  <circle cx="250" cy="212" r="3.5" fill="#C8972E" />
+
+  <!-- Center Artwork & Emblem Group -->
+  <g transform="translate(0, 5)">
+    <!-- Tower Crane (Solid Gold) -->
+    <g class="crane-fill">
+      <!-- Crane Base -->
+      <path d="M 68 402 L 132 402 L 126 390 L 74 390 Z" />
+      
+      <!-- Crane Mast Tower -->
+      <rect x="88" y="278" width="24" height="112" rx="2" />
+      
+      <!-- Tower Lattice Windows (High-Contrast Navy) -->
+      <g fill="#162866">
+        <circle cx="100" cy="292" r="4.5" />
+        <circle cx="100" cy="312" r="4.5" />
+        <circle cx="100" cy="332" r="4.5" />
+        <circle cx="100" cy="352" r="4.5" />
+        <circle cx="100" cy="372" r="4.5" />
+      </g>
+
+      <!-- Crane Operator Cab & Turntable -->
+      <rect x="78" y="260" width="44" height="18" rx="2" />
+      <rect x="83" y="263" width="12" height="10" fill="#162866" />
+
+      <!-- Crane Mast Peak (Apex) -->
+      <polygon points="100,230 88,260 112,260" />
+
+      <!-- Counter-Jib (Left Arm with Counterweights) -->
+      <rect x="62" y="252" width="26" height="8" rx="1" />
+      <rect x="58" y="250" width="14" height="14" rx="2" />
+
+      <!-- Horizontal Main Jib -->
+      <rect x="100" y="252" width="180" height="7" rx="1" />
+
+      <!-- Pendants / Tie Cables -->
+      <line x1="100" y1="230" x2="65" y2="252" stroke="#C8972E" stroke-width="2.5" />
+      <line x1="100" y1="230" x2="200" y2="252" stroke="#C8972E" stroke-width="2.5" />
+      <line x1="100" y1="230" x2="275" y2="252" stroke="#C8972E" stroke-width="2.5" />
+
+      <!-- Trolley on Jib -->
+      <rect x="238" y="259" width="16" height="5" rx="1" fill="#162866" />
+
+      <!-- Hoist Cable Line -->
+      <line x1="246" y1="264" x2="246" y2="305" stroke="#162866" stroke-width="2" />
+
+      <!-- Crane Hook / Plumb Bob -->
+      <ellipse cx="246" cy="309" rx="5" ry="5" fill="#C8972E" />
+      <path d="M 246 314 L 246 322 A 4 4 0 0 1 242 326" fill="none" stroke="#162866" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Architectural Crown Roofline Chevrons -->
+    <g transform="translate(0, 0)">
+      <!-- Left Gable (Gold) -->
+      <polygon points="152,335 168,345 188,318 174,308" fill="#C8972E" />
+      <polygon points="186,320 200,332 215,312 201,300" fill="#C8972E" />
+
+      <!-- Central Grand Chevron (Royal Navy with Gold Plumb Heart) -->
+      <polygon points="198,300 246,346 294,300 274,290 246,318 218,290" fill="#162866" />
+      <circle cx="246" cy="319" r="6" fill="#C8972E" stroke="#FFFFFF" stroke-width="1.5" />
+
+      <!-- Right Gable (Gold & Navy) -->
+      <polygon points="296,300 318,336 348,314 326,298" fill="#C8972E" />
+      <polygon points="320,335 342,330 365,310 345,315" fill="#162866" />
+    </g>
+
+    <!-- BRC Monogram Letters -->
+    <g fill="#162866" transform="translate(138, 334)">
+      <!-- Letter 'B' -->
+      <path d="M 0 0 L 32 0 C 44 0 52 5 52 16 C 52 23 48 29 40 32 C 51 34 56 42 56 52 C 56 64 47 70 32 70 L 0 70 Z M 13 12 L 13 28 L 29 28 C 36 28 40 25 40 20 C 40 15 36 12 29 12 Z M 13 40 L 13 58 L 32 58 C 39 58 43 55 43 49 C 43 43 39 40 32 40 Z" />
+      
+      <!-- Letter 'R' -->
+      <path d="M 72 0 L 105 0 C 119 0 128 7 128 20 C 128 31 120 38 108 40 L 132 70 L 115 70 L 93 42 L 85 42 L 85 70 L 72 70 Z M 85 12 L 85 30 L 103 30 C 111 30 115 27 115 21 C 115 15 111 12 103 12 Z" />
+      
+      <!-- Letter 'C' -->
+      <path d="M 196 16 C 187 6 174 0 158 0 C 137 0 122 15 122 35 C 122 55 137 70 158 70 C 174 70 188 64 196 54 L 186 45 C 180 52 170 57 158 57 C 145 57 135 47 135 35 C 135 23 145 13 158 13 C 170 13 180 18 186 25 Z" />
+    </g>
+  </g>
+
+  <!-- Bottom Architectural Dividing Rule -->
+  <line x1="45" y1="422" x2="455" y2="422" stroke="#162866" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Tagline -->
+  <text x="250" y="448" text-anchor="middle" class="brand-tagline">“DO IT RIGHT THE FIRST TIME AND HAVE PEACE OF MIND”</text>
+</svg>
