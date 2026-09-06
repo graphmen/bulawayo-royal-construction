@@ -907,15 +907,35 @@ h1, h2, h3, h4, .brand-font {
    INTERACTIVE PROJECT ESTIMATOR & SCOPE CALCULATOR
    ========================================================================== */
 .estimator-section {
+  position: relative;
   padding: 96px 0;
   background: var(--brand-navy-dark);
   color: var(--white);
   border-top: 3px solid var(--brand-gold);
   border-bottom: 3px solid var(--brand-gold);
+  overflow: hidden;
+}
+
+.estimator-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 21, 54, 0.88);
+  background-image: url('../assets/images/projects/project-render-modern-home.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.estimator-section .container {
+  position: relative;
+  z-index: 10;
 }
 
 .estimator-wrapper {
-  background: var(--brand-navy-card);
+  background: rgba(22, 40, 102, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 2px solid var(--brand-gold);
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-lg);
