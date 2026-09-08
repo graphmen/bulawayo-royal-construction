@@ -525,6 +525,8 @@ h1, h2, h3, h4, .brand-font {
   font-size: 0.86rem;
   font-weight: 600;
   color: var(--slate-200);
+  line-height: 1.35;
+  max-width: 280px;
 }
 
 .trust-badge-item svg {

@@ -1,7 +1,7 @@
 /**
  * BULAWAYO ROYAL CONSTRUCTION
  * Interactive Project Scope & Estimator Widget
- * Connects directly to WhatsApp: +263 77 299 0134
+ * Connects directly to WhatsApp: +263 71 899 0134
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -129,17 +129,21 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter(key => state.addons[key])
       .map(key => tradeLabels[key]);
 
+    const locationLabel = state.location === 'Elsewhere in Zimbabwe'
+      ? state.location
+      : `${state.location}, Bulawayo`;
+
     if (outProject) outProject.textContent = state.projectTypeName;
-    if (outLocation) outLocation.textContent = state.location + ', Bulawayo';
+    if (outLocation) outLocation.textContent = locationLabel;
     if (outTrades) outTrades.textContent = activeTrades.length > 0 ? `${activeTrades.length} Trades Selected` : 'Consultation Only';
     if (outTimeline) outTimeline.textContent = config.timeline;
     if (outMilestones) outMilestones.textContent = config.milestones;
 
     // Generate WhatsApp Link
-    const textMsg = `Hello Bulawayo Royal Construction! 🏛️\n\nI would like to request an official quotation & site assessment.\n\n*PROJECT DETAILS:*\n• *Type:* ${state.projectTypeName}\n• *Location:* ${state.location}, Bulawayo\n• *Estimated Duration:* ${config.timeline}\n• *Selected Scope:* ${activeTrades.join(', ')}\n\n_Motto: Do it right the first time and have peace of mind._\n\nPlease let me know the next steps for a detailed Bill of Quantities (BOQ). Thank you!`;
+    const textMsg = `Hello Bulawayo Royal Construction! 🏛️\n\nI would like to request an official quotation & site assessment.\n\n*PROJECT DETAILS:*\n• *Type:* ${state.projectTypeName}\n• *Location:* ${locationLabel}\n• *Estimated Duration:* ${config.timeline}\n• *Selected Scope:* ${activeTrades.join(', ')}\n\n_Motto: Do it right the first time and have peace of mind._\n\nPlease let me know the next steps for a detailed Bill of Quantities (BOQ). Thank you!`;
 
     const encodedMsg = encodeURIComponent(textMsg);
-    const whatsappUrl = `https://wa.me/263772990134?text=${encodedMsg}`;
+    const whatsappUrl = `https://wa.me/263718990134?text=${encodedMsg}`;
 
     if (whatsappBtn) {
       whatsappBtn.href = whatsappUrl;

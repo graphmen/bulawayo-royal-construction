@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Construct WhatsApp message
       const text = `Hello Bulawayo Royal Construction,\n\n*NEW INQUIRY VIA WEBSITE*\n• *Client Name:* ${name}\n• *Phone:* ${phone}\n• *Email:* ${email}\n• *Service Needed:* ${service}\n• *Site Location:* ${location}\n• *Project Scope / Details:* ${message}\n\n_Do it right the first time and have peace of mind._`;
 
-      const whatsappUrl = `https://wa.me/263772990134?text=${encodeURIComponent(text)}`;
+      const whatsappUrl = `https://wa.me/263718990134?text=${encodeURIComponent(text)}`;
 
       if (formSuccess) {
         formSuccess.style.display = 'block';
