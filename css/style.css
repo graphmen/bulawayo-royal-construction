@@ -819,7 +819,7 @@ h1, h2, h3, h4, .brand-font {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 26px;
 }
 
@@ -833,6 +833,29 @@ h1, h2, h3, h4, .brand-font {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.service-card.featured-hire {
+  border-top: 4px solid var(--brand-gold);
+  background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
+  box-shadow: 0 4px 18px rgba(212, 155, 40, 0.12);
+}
+
+.service-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--brand-gold-soft);
+  color: var(--brand-navy);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  border: 1px solid var(--brand-gold);
+  width: fit-content;
 }
 
 .service-card:hover {
@@ -1781,6 +1804,344 @@ h1, h2, h3, h4, .brand-font {
 }
 
 /* ==========================================================================
+   PLANT & EQUIPMENT HIRE SECTION
+   ========================================================================== */
+.plant-hire-section {
+  position: relative;
+  padding: 96px 0;
+  background: #09132A;
+  color: var(--white);
+  border-top: 3px solid var(--brand-gold);
+  border-bottom: 3px solid var(--brand-gold);
+  overflow: hidden;
+}
+
+.plant-hire-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(212, 155, 40, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(20, 38, 92, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.plant-hire-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.plant-hire-header {
+  margin-bottom: 32px;
+}
+
+.plant-hire-header .section-tag {
+  background: rgba(212, 155, 40, 0.18);
+  color: #F5D27A;
+  border-color: rgba(212, 155, 40, 0.4);
+}
+
+.plant-hire-title {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.plant-hire-motto {
+  font-size: 1.05rem;
+  color: #F5D27A;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.plant-hire-desc {
+  font-size: 0.98rem;
+  color: #CBD5E1;
+  line-height: 1.65;
+}
+
+/* Machinery Cards Grid */
+.machinery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.machine-card {
+  background: rgba(14, 30, 69, 0.7);
+  border: 1px solid rgba(212, 155, 40, 0.25);
+  border-radius: var(--border-radius-md);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(8px);
+}
+
+.machine-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-gold);
+  background: rgba(20, 42, 98, 0.85);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.machine-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F5D27A;
+  background: rgba(212, 155, 40, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 155, 40, 0.3);
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.machine-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.machine-purpose {
+  font-size: 0.88rem;
+  color: #E2E8F0;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.machine-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  padding-top: 12px;
+}
+
+.machine-specs li {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.machine-specs li span.check {
+  color: var(--brand-gold);
+  font-weight: bold;
+}
+
+/* Sectors & Applications */
+.plant-applications {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-md);
+  padding: 20px 22px;
+  margin-bottom: 28px;
+}
+
+.applications-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #F5D27A;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.applications-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(14, 30, 69, 0.9);
+  border: 1px solid rgba(212, 155, 40, 0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.app-tag svg {
+  width: 14px;
+  height: 14px;
+  color: var(--brand-gold);
+}
+
+/* 4 Trust Advantages */
+.hire-advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px 14px;
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--brand-gold);
+}
+
+.advantage-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--brand-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.advantage-item strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--white);
+}
+
+.advantage-item p {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  margin: 0;
+}
+
+/* Side Card / Flyer Poster Showcase */
+.plant-hire-sidebar {
+  background: linear-gradient(180deg, #11214D 0%, #0B1536 100%);
+  border: 2px solid var(--brand-gold);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 90px;
+}
+
+.flyer-preview-wrap {
+  position: relative;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(212, 155, 40, 0.3);
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flyer-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.flyer-preview-wrap:hover .flyer-preview-img {
+  transform: scale(1.02);
+}
+
+.flyer-zoom-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(11, 21, 54, 0.85);
+  color: #F5D27A;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--brand-gold);
+  backdrop-filter: blur(4px);
+}
+
+.hire-hotline-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-sm);
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hire-hotline-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94A3B8;
+  margin-bottom: 6px;
+}
+
+.hire-hotline-numbers {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #F5D27A;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hire-hotline-numbers a {
+  color: #F5D27A;
+  transition: var(--transition-smooth);
+}
+
+.hire-hotline-numbers a:hover {
+  color: var(--white);
+}
+
+.hire-action-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-hire-whatsapp {
+  background: #25D366;
+  color: #032612;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+}
+
+.btn-hire-whatsapp:hover {
+  background: #1EBE5D;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1080px) {
@@ -1818,6 +2179,13 @@ h1, h2, h3, h4, .brand-font {
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .plant-hire-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .plant-hire-sidebar {
+    position: static;
   }
 }
 
@@ -1954,6 +2322,20 @@ h1, h2, h3, h4, .brand-font {
   }
   .service-card {
     padding: 24px 18px;
+  }
+  .plant-hire-section {
+    padding: 60px 0;
+  }
+  .plant-hire-title {
+    font-size: 1.85rem;
+  }
+  .machinery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hire-advantages {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   .gallery-grid {
     grid-template-columns: 1fr;

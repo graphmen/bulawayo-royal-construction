@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
       brickwork: true,
       roofing: true,
       plumbing: true,
-      electrical: true
+      electrical: true,
+      equipment: false
     }
   };
 
@@ -68,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Architectural Plans & Council Permit',
       timeline: '10 – 14 Days',
       milestones: '3D Concept Design → Detailed Drawings → Council Submission'
+    },
+    'equipment-hire': {
+      name: 'Plant & Equipment Hire (Bulawayo)',
+      timeline: 'Daily / Weekly / Monthly Flexible Hire',
+      milestones: 'Equipment Reservation → Site Delivery / Pickup → Operation → Return & Inspection'
     }
   };
 
@@ -77,7 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     brickwork: 'Brickwork & Plaster',
     roofing: 'Roofing & Guttering',
     plumbing: 'Plumbing & Drainage',
-    electrical: 'Electrical & Solar'
+    electrical: 'Electrical & Solar',
+    equipment: 'Equipment & Plant Hire'
   };
 
   // Event Listeners for Type buttons
@@ -140,7 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (outMilestones) outMilestones.textContent = config.milestones;
 
     // Generate WhatsApp Link
-    const textMsg = `Hello Bulawayo Royal Construction! 🏛️\n\nI would like to request an official quotation & site assessment.\n\n*PROJECT DETAILS:*\n• *Type:* ${state.projectTypeName}\n• *Location:* ${locationLabel}\n• *Estimated Duration:* ${config.timeline}\n• *Selected Scope:* ${activeTrades.join(', ')}\n\n_Motto: Do it right the first time and have peace of mind._\n\nPlease let me know the next steps for a detailed Bill of Quantities (BOQ). Thank you!`;
+    let textMsg = '';
+    if (state.projectType === 'equipment-hire') {
+      textMsg = `Hello Bulawayo Royal Construction! 🚜\n\nI would like to hire construction equipment in Bulawayo.\n\n*EQUIPMENT HIRE INQUIRY:*\n• *Service:* Plant & Equipment Hire (Bulawayo)\n• *Site / Project Location:* ${locationLabel}\n• *Required Period:* Flexible (Daily / Weekly / Monthly)\n• *Machinery Needed:* Plate Compactor / Tamping Rammer / Concrete Mixer\n\n_Motto: Do it right the first time and have peace of mind._\n\nPlease send me current machine availability and hire rates. Thank you!`;
+    } else {
+      textMsg = `Hello Bulawayo Royal Construction! 🏛️\n\nI would like to request an official quotation & site assessment.\n\n*PROJECT DETAILS:*\n• *Type:* ${state.projectTypeName}\n• *Location:* ${locationLabel}\n• *Estimated Duration:* ${config.timeline}\n• *Selected Scope:* ${activeTrades.join(', ')}\n\n_Motto: Do it right the first time and have peace of mind._\n\nPlease let me know the next steps for a detailed Bill of Quantities (BOQ). Thank you!`;
+    }
 
     const encodedMsg = encodeURIComponent(textMsg);
     const whatsappUrl = `https://wa.me/263718990134?text=${encodedMsg}`;

@@ -86,6 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Lightbox for Flyer preview
+  const flyerTrigger = document.querySelector('.flyer-preview-wrap');
+  if (flyerTrigger) {
+    flyerTrigger.addEventListener('click', () => {
+      const img = flyerTrigger.querySelector('img');
+      if (img && lightboxModal && lightboxImg) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = 'BRC Plant & Equipment Hire Flyer';
+        if (lightboxCaption) {
+          lightboxCaption.textContent = 'Bulawayo Royal Construction - Plant & Equipment Hire in Bulawayo (Call / WhatsApp 0772 990 134 / 0718 990 134)';
+        }
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+
   if (lightboxClose && lightboxModal) {
     lightboxClose.addEventListener('click', closeLightbox);
     lightboxModal.addEventListener('click', (e) => {
